@@ -1,0 +1,25 @@
+ALGORITHM Recursion
+VAR
+    str:STRING;
+    i:INTEGER;
+BEGIN
+    Write ("type a word")
+    Read(str);
+
+    IF (str.length<=1) THEN
+        Write("the word you entered is a palindrome")
+
+    ELSE 
+        i:=0;
+        WHILE (i<= (str.length-1)/2) DO
+            IF (str[i] = str[str.length-i-1]) THEN
+                i:=i+1;
+            ELSE
+                Write ("the word you entered is not palindrome");
+                Break;
+            END_IF
+        END_WHILE
+        IF ( i=(str.length+1)/2) THEN
+            Write ("the word you entered is palindrome");
+        END_IF
+END
